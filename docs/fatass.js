@@ -67,14 +67,14 @@ var correct = function () {
         }, 1500);
     }, 1000);
 };
+var works = ["i'm satisfied", "i am satisfied", "unsatisfied", "ac rennes", "installation", "hamster fine", "hamster style", "salside", "mousse à la fraise", "adresse five", "aérosol cheval", "on se laisse faire", "on se serait", "installer smile", "OCS free", "hamster", "installer skype", "comme ça la soirée", "insérer sphère", "ACSI", "installation", "cérès farine", "enceinte ryght", "salut Fred", "hacer espagnol", "recette slide", "IMC", "i'm set aside", "en salade", "concert Espagne"];
 
 var parseTranscript = function (transcript) {
     var input = transcript.toLowerCase();
-    if (~input.indexOf("i'm satisfied") || ~input.indexOf("i am satisfied") || ~input.indexOf("unsatisfied")) {
+    if (works.includes(input))
         correct();
-    } else {
+    else
         document.getElementById('answer').innerHTML = transcript;
-    }
 };
 
 
